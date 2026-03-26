@@ -31,12 +31,12 @@ jobs:
         sdkmanager "platforms;android-34"
         sdkmanager "build-tools;34.0.0"
 
-    - name: Build 10 APK
+    - name: Build 100 APK
       run: |
 
         mkdir outputs
 
-        for i in {1..10}
+        for i in {1..100}
         do
 
         rm -rf app
@@ -132,5 +132,5 @@ jobs:
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: klik-indomaret-10
+        name: klik-indomaret-100
         path: outputs
